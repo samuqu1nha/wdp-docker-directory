@@ -37,7 +37,7 @@ login() {
 # Creates docker-compose.yml and wpblog.conf
 setup() {
     
-    cd ~/wdp-docker-directory
+    cd ~/wdp-docker-directory/
 
     echo -e "
     Root password: $rootpass
@@ -96,7 +96,7 @@ server {
 }
 ' > wpblog.conf
 
-    cd ~/wdp-docker-directory
+    cd ~/wdp-docker-directory/
 
     # docker-compose.yml
     echo "
@@ -152,7 +152,7 @@ volumes:
 # Start Docker Compose
 dcUp() {
     echo
-    cd ~/wdp-docker-directory
+    cd ~/wdp-docker-directory/
     docker compose up -d
     echo 
     sleep 2
