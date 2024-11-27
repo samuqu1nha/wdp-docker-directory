@@ -182,11 +182,9 @@ if [ $isRoot -ne 0 ]; then
     echo
     echo "Permission denied: must be root."
     exit 1
-fi
-
-
-
-traco="------------------------------------------------------------------------------"
+    sudo su
+else 
+    traco="------------------------------------------------------------------------------"
 
 echo
 echo "$traco"
@@ -203,3 +201,8 @@ dcUp
 showIP
 
 # Made by Samuel Nogueira on 27 Nov 2024
+fi
+
+
+
+
