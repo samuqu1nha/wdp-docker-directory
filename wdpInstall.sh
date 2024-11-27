@@ -181,6 +181,9 @@ isRoot=$(id -u)
 if [ $isRoot -ne 0 ]; then
     echo
     echo "Permission denied: must be root."
+    echo
+    echo "do bash wdpInstall.sh again once you have root privileges"
+    echo
     sudo su
     exit 1
 else 
