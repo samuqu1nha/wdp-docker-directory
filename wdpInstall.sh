@@ -163,7 +163,7 @@ dcUp() {
 
 showIP(){
 
-    IP=$(hostname -I | awk '{print $1}')
+    IP=$(hostname -I)
     echo 
     echo -e "This is your Virtual Machine's ip: $IP"
     echo
