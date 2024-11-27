@@ -1,4 +1,4 @@
-
+NOTE: These scripts are terrible. If you know minimally about CentOS 9 you can easily solve any problem that it may happen. 
 
 wdpInstall.sh quick breakdown:
 
