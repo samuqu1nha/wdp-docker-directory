@@ -205,4 +205,10 @@ dcUp
 showIP
 fi
 
+exit 
+cd ~
+rm -rf wdp-docker-directory
+sudo su
+cd ~/wdp-docker-directory
+
 # Made by Samuel Nogueira on 27 Nov 2024
