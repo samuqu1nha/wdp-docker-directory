@@ -36,7 +36,9 @@ login() {
 
 # Creates docker-compose.yml and wpblog.conf
 setup() {
+
     
+    cd ~
     cd ~/wdp-docker-directory/
 
     echo -e "
@@ -96,6 +98,7 @@ server {
 }
 ' > wpblog.conf
 
+    cd ~
     cd ~/wdp-docker-directory/
 
     # docker-compose.yml
@@ -152,6 +155,7 @@ volumes:
 # Start Docker Compose
 dcUp() {
     echo
+    cd ~
     cd ~/wdp-docker-directory/
     docker compose up -d
     echo 
@@ -179,6 +183,8 @@ if [ $isRoot -ne 0 ]; then
     echo "Permission denied: must be root."
     exit 1
 fi
+
+
 
 traco="------------------------------------------------------------------------------"
 
