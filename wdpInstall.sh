@@ -167,7 +167,7 @@ dcUp() {
 
 showIP(){
 
-    IP=$(hostname -I)
+    IP=$(hostname -I | awk '{print $1}')
     echo 
     echo -e "This is your Virtual Machine's ip: $IP"
     echo
@@ -181,10 +181,14 @@ isRoot=$(id -u)
 if [ $isRoot -ne 0 ]; then
     echo
     echo "Permission denied: must be root."
-    exit 1
     sudo su
+    exit 1
 else 
-    traco="------------------------------------------------------------------------------"
+
+cd ~
+git clone https://github.com/samuqu1nha/wdp-docker-directory.git
+
+traco="------------------------------------------------------------------------------"
 
 echo
 echo "$traco"
@@ -199,10 +203,6 @@ login
 setup
 dcUp
 showIP
-
-# Made by Samuel Nogueira on 27 Nov 2024
 fi
 
-
-
-
+# Made by Samuel Nogueira on 27 Nov 2024
