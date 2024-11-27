@@ -16,3 +16,6 @@ wdpUninstall quick breakdown:
 4- Removes the cloned directory (wdp-docker-directory)
 
 This is my first upload to GitHub. I did this as a project for my internship.
+
+SE: 
+shellscript to run wordpress on docker using nginx on virtual machine centos 9
